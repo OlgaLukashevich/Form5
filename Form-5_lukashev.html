@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    
+    <meta charset="UTF-8">
+       <meta name="viewport" content="width=device-width, initial-scale=1.0">
+       <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <title>Form-5 (форма-5)</title>
+  <link rel='stylesheet' href='style.css'>
+</head>
+<body>
+  <div id="test"><h3>Форма с UI элементами</h3></div>
+  <form class="myForm">
+    
+  <label for="email_address">ID товара </label>
+  <input type="text" name="IDtovara" id="email_address">
+<label for="email_address">Email </label>
+<input type="email" name="email_address" id="email_address">
+
+<label for="pickup_time">Pickup Date/Time</label>
+<input type="datetime-local" name="pickup_time" id="pickup_time" required="">
+
+<label for="comments">Special Instructions</label>
+<textarea name="comments" id="comments" maxlength="500"></textarea>
+<div class="preloader">
+  <h2>Preloader</h2>
+  <svg viewBox="-2000 -1000 4000 2000">
+      <path id="inf" d="M354-354A500 500 0 1 1 354 354L-354-354A500 500 0 1 0-354 354z"></path>
+      <use xlink:href="#inf" stroke-dasharray="1570 5143" stroke-dashoffset="6713px"></use>
+  </svg>
+</div>
+</div>
+<button>Submit</button>
+</form>
+<div id="map" style="width:50%;height:400px;"></div>
+</div>
+<script>
+    function myMap() {
+      var mapCanvas = document.getElementById("map");
+      var mapOptions = {
+        center: new google.maps.LatLng(51.5, -0.2), zoom: 10
+      };
+      var map = new google.maps.Map(mapCanvas, mapOptions);
+    }
+    </script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDR8P72HMX3zllKeeZt8X89dJWMEu0LSX8&callback=myMap" async defer></script>
+   
+    
+</body>
+</html>
